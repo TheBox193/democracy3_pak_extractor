@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+	<title>Democracy 3 Pak Extractor</title>
+	<script src="extractor.js"></script>
+</head>
+<body>
+	<h1>Democracy 3 Pak Extractor</h1>
+	<h2>What is this?</h2>
+	<p>Having gotten my copy of democracy 3 through GOG, I was a bit annoyed that the developer decided to make mods not work without steam. I remembered seeing the Cyberpunk mod a while back (a few years, actually) before I got the game, which is kind of the reason I got the game. With democracy 4 already released, I figured now was as good as time as any to try my hand at hex editing.</p>
+	<h2>How to use?</h2>
+	<p>Upload your mod .pak file here, and download every thing and place them in the correct folders (sorry). Place that entire subdirectory to your democracy 3 installation, and THEN, move the config file to %YOUR_GAME_INSTALLATION%/data/mods. You may need to rename the folder that contains said mod to match the config file.</p>
+	<p>For how a correct mod should look, look at any one of your dlcs or example .zip mods from the positech site.</p>
+	<h2>How does Democracy 3 implement pak files?</h2>
+	<p>For nerds, it's a unsigned little-endian 32-bit integer indicating the file size, and then followed by the file. There's also a list of file names/structure and another integer denoting the size of said list at the top.<p>
+	<p>.pak files aren't a standard, even across franchies. Quake 1,2 vs Quake 4 use .pak files, but one built for Quake 1 can't open Quake 4's files because they aren't actually the same, on a nitty-gritty level. Most .pak files are really just disguised .zip files, but if you've gotten here, that likely didn't work. So how did I do this? <a href="https://mh-nexus.de/en/hxd/" target="_blank">HxD</a> and a morning to kill staring at hexidecimal.</p>
+</body>
