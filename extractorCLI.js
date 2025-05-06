@@ -39,7 +39,7 @@ async function decodePak(buffer, outDir) {
     offset += fileLen;
 
     const target = join(outDir, relPath);
-    console.log('Would write', target)
+    console.log('Creating file:', target)
     await mkdir(dirname(target), { recursive: true });
     await writeFile(target, fileBuf);
   }
